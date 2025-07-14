@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --main-font: "Lexend Giga", sans-serif;
+}
+
+.main-font {
+  font-family: var(--main-font);
+}
+
+/* Background Hero Section */
+.element::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('main-bg-1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out;
+  z-index: -10;
+}
+
+.element:hover::before,
+.element-2:hover::before,
+.element-3:hover::before,
+.element-4:hover::before,
+.element-5:hover::before,
+.element-6:hover::before,
+.element-7:hover::before,
+.element-8:hover::before,
+.element-9:hover::before {
+  transform: scale(1);
+}
+
+.element-2::before {
+  background-image: url('project-1.jpg');
+}
+
+.element-3::before {
+  background-image: url('project-2.jpg');
+}
+
+.element-4::before {
+  background-image: url('project-3.jpg');
+}
+
+.element-5::before {
+  background-image: url('project-4.jpg');
+}
+
+.element-6::before {
+  background-image: url('team-1.jpg');
+}
+
+.element-7::before {
+  background-image: url('team-2.jpg');
+}
+
+.element-8::before {
+  background-image: url('team-3.jpg');
+}
+
+.element-9::before {
+  background-image: url('footer-bg.jpg');
+}
+
+/* --------------------------------------------------------------------------- */
+
+.side-style {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.side-style:hover {
+  transform: translateY(-8px);
+}
+
+
+
+/* For Debugging */
+
+.test-border-1 {
+  border: 2px solid red;
+}
+
+.test-border-2 {
+  border: 2px solid black;
+}
+
+.test-border-3 {
+  border: 2px solid green;
+}
+
+.test-border-4 {
+  border: 2px solid blue;
+}
