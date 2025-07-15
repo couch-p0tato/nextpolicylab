@@ -15,7 +15,8 @@
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('/nextpolicylab/main-bg-1.jpg');
+  /* background-image: url('/nextpolicylab/main-bg-1.jpg'); */
+  background-image: url('main-bg-1.jpg');
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -37,35 +38,43 @@
 }
 
 .element-2::before {
-  background-image: url('/nextpolicylab/project-1.jpg');
+  /* background-image: url('/nextpolicylab/project-1.jpg'); */
+  background-image: url('project-1.jpg');
 }
 
 .element-3::before {
-  background-image: url('/nextpolicylab/project-2.jpg');
+  /* background-image: url('/nextpolicylab/project-2.jpg'); */
+  background-image: url('project-2.jpg');
 }
 
 .element-4::before {
-  background-image: url('/nextpolicylab/project-3.jpg');
+  /* background-image: url('/nextpolicylab/project-3.jpg'); */
+  background-image: url('project-3.jpg');
 }
 
 .element-5::before {
-  background-image: url('/nextpolicylab/project-4.jpg');
+  /* background-image: url('/nextpolicylab/project-4.jpg'); */
+  background-image: url('project-4.jpg');
 }
 
 .element-6::before {
-  background-image: url('/nextpolicylab/team-1.jpg');
+  /* background-image: url('/nextpolicylab/team-1.jpg'); */
+  background-image: url('team-1.jpg');
 }
 
 .element-7::before {
-  background-image: url('/nextpolicylab/team-2.jpg');
+  /* background-image: url('/nextpolicylab/team-2.jpg'); */
+  background-image: url('team-2.jpg');
 }
 
 .element-8::before {
-  background-image: url('/nextpolicylab/team-3.jpg');
+  /* background-image: url('/nextpolicylab/team-3.jpg'); */
+  background-image: url('team-3.jpg');
 }
 
 .element-9::before {
-  background-image: url('/nextpolicylab/footer-bg.jpg');
+  /* background-image: url('/nextpolicylab/footer-bg.jpg'); */
+  background-image: url('footer-bg.jpg');
 }
 
 /* --------------------------------------------------------------------------- */
