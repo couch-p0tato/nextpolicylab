@@ -1,39 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
-    useEffect(() => {
-        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-        return () => (document.body.style.overflow = 'auto');
-    }, [isOpen]);
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    return () => (document.body.style.overflow = 'auto');
+  }, [isOpen]);
 
-    if (!isOpen || !project) return null;
+  if (!isOpen || !project) return null;
+
+  const renderDescription = (desc) => {
+    if (Array.isArray(desc)) {
+      return desc.map((p, idx) => <p key={idx} className="mb-3 text-gray-700">{p}</p>);
+    }
+    return <p className="mb-3 text-gray-700">{desc}</p>;
+  };
 
   return (
     <>
-      <div
-        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
-        onClick={onClose}
-      />
-      <div className="fixed top-1/2 left-1/2 z-50 w-full max-w-md p-6 bg-white rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2">
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-red-500"
-        >
-          <X className="w-5 h-5" />
+      <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40" onClick={onClose} />
+
+      <div className="fixed top-1/2 left-1/2 z-50 h-[500px] lg:h-fit overflow-y-scroll lg:overflow-y-auto w-[95%] lg:w-full max-w-2xl p-6 bg-white rounded shadow-lg transform -translate-x-1/2 -translate-y-1/2">
+        <button onClick={onClose} className="absolute top-3 right-3 text-black hover:text-[#353030]/80 cursor-pointer mt-2">
+          <X className="w-6 h-6" />
         </button>
 
-        <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-        <p className="text-gray-700 mb-4">{project.description}</p>
-        <h4 className="font-semibold">Technologies:</h4>
-        <ul className="list-disc list-inside text-sm text-gray-600">
-          {project.tech.map((t, i) => (
-            <li key={i}>{t}</li>
-          ))}
-        </ul>
+        <h2 className="text-xl text-black font-semibold mb-4">{project.title}</h2>
+
+        {renderDescription(project.description || project.description_1)}
+
       </div>
     </>
   );
 };
 
-export default ProjectModal
+export default ProjectModal;

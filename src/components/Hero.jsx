@@ -40,7 +40,7 @@ const Hero = () => {
                 <h3 className='hidden md:block text-center text-white text-5xl leading-normal font-bold'>Innovating Policy <br /> Solutions Together</h3>
 
                 <button onClick={() => setIsOpen(true)} className='text-white md:text-lg bg-[#353030]/80 py-1.5 px-10 border border-white font-light cursor-pointer'>
-                    JOIN US
+                    LEARN MORE
                 </button>
             </div>
         </div>
