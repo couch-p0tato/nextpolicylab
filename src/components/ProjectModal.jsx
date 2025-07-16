@@ -21,11 +21,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40" onClick={onClose} />
 
       <div className="fixed top-1/2 left-1/2 z-50 h-[500px] lg:h-fit overflow-y-scroll lg:overflow-y-auto w-[95%] lg:w-full max-w-2xl p-6 bg-white rounded shadow-lg transform -translate-x-1/2 -translate-y-1/2">
-        <button onClick={onClose} className="absolute top-3 right-3 text-black hover:text-[#353030]/80 cursor-pointer mt-2">
-          <X className="w-6 h-6" />
-        </button>
+        <div className='flex justify-between'>
+            <h2 className="text-xl text-black font-semibold mb-4">{project.title}</h2>
 
-        <h2 className="text-xl text-black font-semibold mb-4">{project.title}</h2>
+            <button onClick={onClose} className=" text-black hover:text-[#353030]/80 cursor-pointer self-start">
+                <X className="w-6 h-6" />
+            </button>
+        </div>
 
         {renderDescription(project.description || project.description_1)}
 

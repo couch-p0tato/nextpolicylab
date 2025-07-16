@@ -2,27 +2,23 @@ import React, { useState } from 'react';
 import ProjectModal from './ProjectModal';
 
 const projectData1 = {
-    title: "EduPass - Portable Digital Education Passport for Migrants and Refugees",
-    description_1: ["I conceptualized and developed EduPass, a secure, cloud-based education passport that allows displaced persons, returnee migrants, and underserved youth to store and transfer academic records, vocational certifications, and language proficiencies across institutional and national borders. It was specifically designed to address the problem of lost or unverifiable academic histories due to conflict, migration, or poor recordkeeping—challenges that disproportionately affect learners across sub-Saharan Africa.",
-        "In collaboration with education ministries, EduPass is now being used to reinstate thousands of displaced learners back into school systems in Nigeria. It also supports skills portability for returnees in Ghana and Kenya and has been reviewed by partners in Europe who are exploring cross-border credentialing frameworks.  (Exhibit 9.18)"
-    ],
+    title: "EduPass - Digital Education Passport for Migrants and Refugees",
+    description_1: "EduPass is a secure, cloud-based digital education passport that allows displaced persons, returnee migrants, and underserved youth to store and transfer academic records, vocational certifications, and language proficiencies across borders. Designed to address the challenges of lost or unverifiable academic histories caused by conflict and migration, EduPass is helping thousands of learners regain access to education systems in Nigeria and support skills portability for returnees in Ghana and Kenya.",
 };
 
 const projectData2 = {
     title: "MobiPolicy - AI-Powered Policy Simulator for Governments and NGOs",
-    description: "I designed MobiPolicy to equip African ministries and NGOs with a user-friendly digital tool that enables evidence-based policy planning in the fields of youth development, education, and migration. Using real datasets, predictive analytics, and AI-generated scenario models, this tool allows decision-makers to simulate the consequences of their policy options before adoption—something previously unavailable to many local governments due to cost or complexity. MobiPolicy was utilized by Osun State in the redesign of their Youth Engagement Framework, by an NGO consortium in Kaduna State, Nigeria, for refugee education planning, and it has been piloted in a governance and policy course at the University of Ibadan. (Exhibit 9.18)",
+    description: "MobiPolicy is an AI-powered digital tool designed to help African ministries and NGOs with evidence-based policy planning in youth development, education, and migration. By utilizing real datasets and predictive analytics, MobiPolicy allows decision-makers to simulate the impact of their policy choices before implementation. It has been used in Osun State for redesigning their Youth Engagement Framework, by an NGO consortium in Kaduna State for refugee education planning, and in a governance course at the University of Ibadan.",
 };
 
 const projectData3 = {
     title: "K-Link - Language-Workforce-Civic Integration App",
-    description: "K-Link, developed as a branch of the KG Language School, serves as a comprehensive mobile platform that supports migrants and displaced individuals through contextualized language learning, vocational readiness, and civic education. Unlike typical language apps, K-Link incorporates AI-adaptive features to guide each user through job-preparation modules, civic rights education, and survival language learning tailored to host communities. It is now used by NGO resettlement partners in Lagos, diaspora support offices, and is being translated into local languages for broader rural access. In collaboration with SendMe Food Tech Ltd, it is also being used to prepare rural youth for participation in agro-tech employment pipelines. (Exhibit 9.18)",
+    description: "K-Link is a mobile platform developed as part of the KG Language School to support migrants and displaced individuals through contextualized language learning, job preparation, and civic education. Unlike traditional language apps, K-Link features AI-driven modules that guide users through job readiness and civic rights education, tailored to their host communities. It is currently used by resettlement partners in Lagos, diaspora support offices, and is being translated for broader access in rural areas. In partnership with SendMe Food Tech Ltd, K-Link is also preparing rural youth for careers in agro-tech.",
 };
 
 const projectData4 = {
     title: "YouthGov360 - Civic Simulation & Policy Training Game",
-    description: ["YouthGov360 is a gamified civic and policy simulation tool I developed to engage young Africans in governance and civic decision-making. Through role-based learning, students simulate scenarios such as managing a state education budget, responding to youth migration, or implementing gender-focused school reforms. It teaches real-life policy trade-offs in an interactive environment informed by African governance structures. (Exhibit 9.18)",
-        "YouthGov360 is now embedded in Osun State’s secondary school civic curriculum, adopted in youth political training by the National Youth Parliament, and used by students at Obafemi Awolowo University.",
-    ],
+    description: "YouthGov360 is a gamified civic and policy simulation tool created to engage young Africans in governance and decision-making. By simulating scenarios like managing state education budgets or addressing youth migration, YouthGov360 helps students understand real-world policy trade-offs. The platform is informed by African governance structures and offers an interactive learning experience focused on practical policy challenges.",
 };
 
 
