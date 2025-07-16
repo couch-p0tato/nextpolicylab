@@ -7,6 +7,7 @@ import Testimonial from './components/Testimonial'
 import Footer from './components/Footer'
 import Impact from './components/Impact'
 import LoadAnim from './components/LoadAnim';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
 
@@ -43,6 +44,16 @@ const App = () => {
       ) : (
         <div className='main-font overflow-hidden'>
           <Hero />
+          <ToastContainer 
+            position="top-right"
+            autoClose={4000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            pauseOnHover
+            draggable
+            theme="light"
+          />
           <Statement />
           <Impact />
           <Projects />

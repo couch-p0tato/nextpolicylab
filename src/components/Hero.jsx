@@ -1,11 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
-import { assets } from '../assets/assets'
+import { assets } from '../assets/assets';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    // For Email
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+        'service_naose4d',
+        'template_ov6qa6k',
+        form.current,
+        '3T9vL7mmUJtx-GkdU'
+        )
+        .then((result) => {
+        toast.success('Message sent successfully!');
+        e.target.reset();
+        }, (error) => {
+        toast.error('Failed to send message. Please try again later.');
+        });
+    };
+
+
+    // For Modal
     useEffect(() => {
         if (isOpen) {
         document.body.style.overflow = 'hidden';
@@ -60,12 +85,13 @@ const Hero = () => {
 
                 <h2 className="text-xl uppercase mb-4">Contact Us</h2>
 
-                <form className="space-y-4">
+                <form ref={form} onSubmit={sendEmail} className="space-y-4">
                     <div>
                         <label className="block text-sm">Name</label>
                         <input
                         type="text"
                         className="w-full px-3 py-2 border rounded"
+                        name="name"
                         placeholder="Your name"
                         />
                     </div>
@@ -75,6 +101,7 @@ const Hero = () => {
                         <input
                         type="email"
                         className="w-full px-3 py-2 border rounded"
+                        name="email"
                         placeholder="Your email"
                         />
                     </div>
@@ -82,6 +109,7 @@ const Hero = () => {
                     <div>
                         <label className="block text-sm">Message</label>
                         <textarea
+                        name="message"
                         className="w-full px-3 py-2 border rounded"
                         rows="4"
                         placeholder="Write your message..."
@@ -89,7 +117,7 @@ const Hero = () => {
                     </div>
 
                     <button type='submit' className='text-black bg-transparent py-1.5 w-full px-10 border border-black cursor-pointer'>
-                        <a href="#">Send Message</a>
+                        Send Message
                     </button>
                 </form>
             </div>
